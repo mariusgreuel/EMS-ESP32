@@ -1459,6 +1459,12 @@ bool System::load_board_profile(std::vector<int8_t> & data, const std::string & 
         data = {17, 18, 8, 5, 0, PHY_type::PHY_TYPE_NONE, 0, 0, 0}; // Liligo S3
     } else if (board_profile == "S32S3") {
         data = {2, 18, 5, 17, 0, PHY_type::PHY_TYPE_NONE, 0, 0, 0}; // BBQKees Gateway S3
+    } else if (board_profile == "XIAOESP32C3") {
+        data = {8, 0, 20, 21, 0, PHY_type::PHY_TYPE_NONE, 0, 0, 0};    // Seeed Studio XIAO ESP32C3
+    } else if (board_profile == "XIAOESP32S3") {
+        data = {21, 0, 44, 43, 0, PHY_type::PHY_TYPE_NONE, 0, 0, 0};    // Seeed Studio XIAO ESP32S3
+    } else if (board_profile == "NANOESP32") {
+        data = {48, 0, 44, 43, 0, PHY_type::PHY_TYPE_NONE, 0, 0, 0};    // Arduino Nano ESP32
     } else if (board_profile == "CUSTOM") {
         // send back current values
         data = {(int8_t)EMSESP::system_.led_gpio_,

@@ -244,7 +244,10 @@ export const BOARD_PROFILES: BoardProfiles = {
   C3MINI: 'Wemos C3 Mini',
   S2MINI: 'Wemos S2 Mini',
   S3MINI: 'Liligo S3',
-  S32S3: 'BBQKees Gateway S3'
+  S32S3: 'BBQKees Gateway S3',
+  XIAOESP32C3: 'Seeed Studio XIAO ESP32C3',
+  XIAOESP32S3: 'Seeed Studio XIAO ESP32S3',
+  NANOESP32: 'Arduino Nano ESP32'
 };
 
 export interface BoardProfile {
