@@ -486,7 +486,11 @@ void WebSettings::set_board_profile(WebSettings & settings) {
         }
 // override if we know the target from the build config like C3, S2, S3 etc..
 #elif CONFIG_IDF_TARGET_ESP32C3
+#ifdef ARDUINO_XIAO_ESP32C3
+        settings.board_profile = "C3XIAO"; // XIAO Gateway C3
+#else
         settings.board_profile = "C3MINI";
+#endif
 #elif CONFIG_IDF_TARGET_ESP32S2
         settings.board_profile = "S2MINI";
 #elif CONFIG_IDF_TARGET_ESP32S3

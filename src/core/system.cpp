@@ -2452,6 +2452,10 @@ bool System::load_board_profile(std::vector<int8_t> & data, const std::string & 
         data = {17, 18, 8, 5, 0, PHY_type::PHY_TYPE_NONE, 0, 0, 0, 0}; // Liligo S3
         // https://lilygo.cc/products/t7-s3
         set_valid_system_gpios();
+    } else if (board_profile == "C3XIAO") {
+        // https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/
+        data = {10, 0, 20, 21, 7, PHY_type::PHY_TYPE_NONE, 0, 0, 0, 0}; // XIAO ESP32C3
+        valid_system_gpios_ = {0, 1, 3, 4, 5, 6, 7, 10, 20, 21};
     } else if (board_profile == "S32S3") {
         data                = {2, 18, 5, 17, 0, PHY_type::PHY_TYPE_NONE, 0, 0, 0, 0}; // BBQKees Gateway S3
         valid_system_gpios_ = {0, 2, 5, 17, 18};

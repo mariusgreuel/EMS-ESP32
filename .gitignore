@@ -3,6 +3,9 @@
 .vscode/extensions.json
 .vscode/launch.json
 
+# Visual Studio
+.vs/
+
 # c++ compiling
 .clang_complete
 .gcc-flags.json

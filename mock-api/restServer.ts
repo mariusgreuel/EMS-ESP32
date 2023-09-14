@@ -5126,6 +5126,18 @@ router
       data.eth_phy_addr = 0;
       data.eth_clock_mode = 0;
       data.led_type = 0;
+    } else if (board_profile == 'C3XIAO') {
+      // Seeed Studio XIAO ESP32C3
+      data.led_gpio = 10;
+      data.dallas_gpio = 0;
+      data.rx_gpio = 20;
+      data.tx_gpio = 21;
+      data.pbutton_gpio = 7;
+      data.phy_type = 0;
+      data.eth_power = 0;
+      data.eth_phy_addr = 0;
+      data.eth_clock_mode = 0;
+      data.led_type = 0;
     }
 
     data.board_profile =
