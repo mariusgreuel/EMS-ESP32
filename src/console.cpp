@@ -293,7 +293,7 @@ static void setup_commands(std::shared_ptr<Commands> & commands) {
                               std::vector<int8_t> data; // led, dallas, rx, tx, button, phy_type, eth_power, eth_phy_addr, eth_clock_mode
                               std::string         board_profile = Helpers::toUpper(arguments.front());
                               if (!to_app(shell).system_.load_board_profile(data, board_profile)) {
-                                  shell.println("Invalid board profile (S32, E32, E32V2, MH-ET, NODEMCU, OLIMEX, OLIMEXPOE, C3MINI, S2MINI, S3MINI, CUSTOM)");
+                                  shell.println("Invalid board profile (S32, E32, E32V2, MH-ET, NODEMCU, OLIMEX, OLIMEXPOE, C3MINI, S2MINI, S3MINI, XIAOESP32C3, XIAOESP32S3, NANOESP32, CUSTOM)");
                                   return;
                               }
                               if (arguments.size() == 2 && Helpers::toLower(arguments.back()) == "nvs") {

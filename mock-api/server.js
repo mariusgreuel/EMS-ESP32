@@ -2680,6 +2680,39 @@ rest_server.get(EMSESP_BOARDPROFILE_ENDPOINT, (req, res) => {
     data.eth_power = 0;
     data.eth_phy_addr = 0;
     data.eth_clock_mode = 0;
+  } else if (board_profile == 'XIAOESP32C3') {
+    // Seeed Studio XIAO ESP32C3
+    data.led_gpio = 10;
+    data.dallas_gpio = 0;
+    data.rx_gpio = 20;
+    data.tx_gpio = 21;
+    data.pbutton_gpio = 9;
+    data.phy_type = 0;
+    data.eth_power = 0;
+    data.eth_phy_addr = 0;
+    data.eth_clock_mode = 0;
+  } else if (board_profile == 'XIAOESP32S3') {
+    // Seeed Studio XIAO ESP32S3
+    data.led_gpio = 21;
+    data.dallas_gpio = 0;
+    data.rx_gpio = 44;
+    data.tx_gpio = 43;
+    data.pbutton_gpio = 0;
+    data.phy_type = 0;
+    data.eth_power = 0;
+    data.eth_phy_addr = 0;
+    data.eth_clock_mode = 0;
+  } else if (board_profile == 'NANOESP32') {
+    // Arduino Nano ESP32
+    data.led_gpio = 48;
+    data.dallas_gpio = 0;
+    data.rx_gpio = 44;
+    data.tx_gpio = 43;
+    data.pbutton_gpio = 0;
+    data.phy_type = 0;
+    data.eth_power = 0;
+    data.eth_phy_addr = 0;
+    data.eth_clock_mode = 0;
   }
 
   console.log('boardProfile GET. Sending back, profile: ' + board_profile + ', ' + 'data: ' + JSON.stringify(data));
